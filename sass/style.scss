@@ -12,12 +12,37 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: 'Segoe UI', sans-serif;
+  @include container(88%);
 }
 
+/*
 .ceva {
   @include max-min(1200px, 320px);
   background: #d2305e;
   color: #f2f2f2;
 }
+
 .altceva {
-  padding: 20px 30px;}
+  padding: 20px 30px;
+}
+*/
+
+.top {
+  @include span(9 of 12);
+  background: #ede18c;
+}
+.header {
+  @include span(3 at 10 of 12);
+  background: #ed5760;
+
+}
+
+.main {
+  @include span(8 of 12);
+  background: #908ad2;
+}
+
+.aside {
+  @include span(4 at 9 of 12);
+  background: #73d477;
+}

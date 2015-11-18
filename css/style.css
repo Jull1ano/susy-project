@@ -3,18 +3,56 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: 'Segoe UI', sans-serif;
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+body:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
-/* line 17, ../sass/style.scss */
+/*
 .ceva {
-  max-width: 1200px;
-  min-width: 320px;
-  margin: 30px auto;
+  @include max-min(1200px, 320px);
   background: #d2305e;
   color: #f2f2f2;
 }
 
-/* line 22, ../sass/style.scss */
 .altceva {
   padding: 20px 30px;
+}
+*/
+/* line 30, ../sass/style.scss */
+.top {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%;
+  background: #ede18c;
+}
+
+/* line 34, ../sass/style.scss */
+.header {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+  background: #ed5760;
+}
+
+/* line 40, ../sass/style.scss */
+.main {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  background: #908ad2;
+}
+
+/* line 45, ../sass/style.scss */
+.aside {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+  background: #73d477;
 }
