@@ -1,0 +1,20 @@
+/* line 11, ../sass/style.scss */
+body {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* line 17, ../sass/style.scss */
+.ceva {
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 30px auto;
+  background: #d2305e;
+  color: #f2f2f2;
+}
+
+/* line 22, ../sass/style.scss */
+.altceva {
+  padding: 20px 30px;
+}

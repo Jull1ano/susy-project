@@ -1,0 +1,23 @@
+// Screen
+// ======
+@import "grids";
+
+@mixin max-min($max, $min) {
+  max-width: $max;
+  min-width: $min;
+  margin: 30px auto;
+}
+
+body {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.ceva {
+  @include max-min(1200px, 320px);
+  background: #d2305e;
+  color: #f2f2f2;
+}
+.altceva {
+  padding: 20px 30px;}
