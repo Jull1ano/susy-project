@@ -8,41 +8,107 @@
   margin: 30px auto;
 }
 
+$large: 1200px;
 body {
   font-size: 16px;
   line-height: 24px;
   font-family: 'Segoe UI', sans-serif;
-  @include container(88%);
+  @include container(80%);
 }
 
-/*
-.ceva {
-  @include max-min(1200px, 320px);
-  background: #d2305e;
-  color: #f2f2f2;
+@include breakpoint(120px) {
+
+  .top {
+    @include span(12);
+    background: #f8c833;
+
+  }
+
+  .header {
+    @include span(12);
+    background: #ed4383;
+
+  }
+
+  .main {
+    @include span(12);
+    background: #908ad2;
+
+  }
+
+  .aside {
+    @include span(12);
+    background: #47ba51;
+  }
 }
 
-.altceva {
-  padding: 20px 30px;
-}
-*/
+@include breakpoint(480px) {
+  .top {
+    @include span(12);
+    background: #f8c833;
 
-.top {
-  @include span(9 of 12);
-  background: #ede18c;
-}
-.header {
-  @include span(3 at 10 of 12);
-  background: #ed5760;
+  }
 
+  .header {
+    @include span(6);
+    background: #ed4383;
+
+  }
+
+  .main {
+    @include span(8);
+    background: #908ad2;
+
+  }
+
+  .aside {
+    @include span(4 at 9);
+    background: #47ba51;
+  }
 }
 
-.main {
-  @include span(8 of 12);
-  background: #908ad2;
-}
+@include breakpoint($large) {
+  @include layout(24);
+  .top {
+    @include span(14);
+    background: #f8c833;
 
-.aside {
-  @include span(4 at 9 of 12);
-  background: #73d477;
+  }
+
+  .header {
+    @include span(10 at 15);
+    background: #ed4383;
+
+  }
+  h4, h3 {
+    @include span(24);
+  }
+  .main {
+    background: #908ad2;
+    @include span(18);
+  }
+
+  .col1, .col2, .col3 {
+    @include breakpoint(500px) {
+      @include span(8 inside);
+    }
+    @include breakpoint(1200px) {
+      @include span(1 of 3 inside);
+    }
+  }
+
+  /*  .col1 {
+      background: #81d25d;
+    }
+    .col2 {
+      background: #d27e72;
+    }
+    .col3 {
+      background: #4f7dd2;
+    }*/
+
+  .aside {
+    @include span(6 at 19);
+    background: #47ba51;
+  }
 }

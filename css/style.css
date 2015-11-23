@@ -1,9 +1,9 @@
-/* line 11, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 body {
   font-size: 16px;
   line-height: 24px;
   font-family: 'Segoe UI', sans-serif;
-  max-width: 88%;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -14,45 +14,150 @@ body:after {
   clear: both;
 }
 
-/*
-.ceva {
-  @include max-min(1200px, 320px);
-  background: #d2305e;
-  color: #f2f2f2;
+@media (min-width: 120px) {
+  /* line 21, ../sass/style.scss */
+  .top {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background: #f8c833;
+  }
+
+  /* line 27, ../sass/style.scss */
+  .header {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background: #ed4383;
+  }
+
+  /* line 33, ../sass/style.scss */
+  .main {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background: #908ad2;
+  }
+
+  /* line 39, ../sass/style.scss */
+  .aside {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background: #47ba51;
+  }
+}
+@media (min-width: 480px) {
+  /* line 46, ../sass/style.scss */
+  .top {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background: #f8c833;
+  }
+
+  /* line 52, ../sass/style.scss */
+  .header {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    background: #ed4383;
+  }
+
+  /* line 58, ../sass/style.scss */
+  .main {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    background: #908ad2;
+  }
+
+  /* line 64, ../sass/style.scss */
+  .aside {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    background: #47ba51;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 72, ../sass/style.scss */
+  .top {
+    width: 57.98319%;
+    float: left;
+    margin-right: 0.84034%;
+    background: #f8c833;
+  }
+
+  /* line 78, ../sass/style.scss */
+  .header {
+    width: 41.17647%;
+    float: right;
+    margin-right: 0;
+    background: #ed4383;
+  }
+
+  /* line 83, ../sass/style.scss */
+  h4, h3 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 86, ../sass/style.scss */
+  .main {
+    background: #908ad2;
+    width: 74.78992%;
+    float: left;
+    margin-right: 0.84034%;
+  }
+}
+@media (min-width: 1200px) and (min-width: 500px) {
+  /* line 91, ../sass/style.scss */
+  .col1, .col2, .col3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 0.41667%;
+    padding-right: 0.41667%;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  /* line 91, ../sass/style.scss */
+  .col1, .col2, .col3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 3.33333%;
+    padding-right: 3.33333%;
+  }
 }
 
-.altceva {
-  padding: 20px 30px;
-}
-*/
-/* line 30, ../sass/style.scss */
-.top {
-  width: 74.57627%;
-  float: left;
-  margin-right: 1.69492%;
-  background: #ede18c;
-}
-
-/* line 34, ../sass/style.scss */
-.header {
-  width: 23.72881%;
-  float: right;
-  margin-right: 0;
-  background: #ed5760;
-}
-
-/* line 40, ../sass/style.scss */
-.main {
-  width: 66.10169%;
-  float: left;
-  margin-right: 1.69492%;
-  background: #908ad2;
-}
-
-/* line 45, ../sass/style.scss */
-.aside {
-  width: 32.20339%;
-  float: right;
-  margin-right: 0;
-  background: #73d477;
+@media (min-width: 1200px) {
+  /*  .col1 {
+      background: #81d25d;
+    }
+    .col2 {
+      background: #d27e72;
+    }
+    .col3 {
+      background: #4f7dd2;
+    }*/
+  /* line 110, ../sass/style.scss */
+  .aside {
+    width: 24.36975%;
+    float: right;
+    margin-right: 0;
+    background: #47ba51;
+  }
 }
