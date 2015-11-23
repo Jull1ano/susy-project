@@ -8,7 +8,6 @@
   margin: 30px auto;
 }
 
-$large: 1200px;
 body {
   font-size: 16px;
   line-height: 24px;
@@ -16,7 +15,10 @@ body {
   @include container(80%);
 }
 
-@include breakpoint(120px) {
+$small: 1px;
+$medium: 480px;
+$large: 1200px;
+@include susy-breakpoint($small) {
 
   .top {
     @include span(12);
@@ -26,7 +28,7 @@ body {
 
   .header {
     @include span(12);
-    background: #ed4383;
+    background: #af887f;
 
   }
 
@@ -42,7 +44,7 @@ body {
   }
 }
 
-@include breakpoint(480px) {
+@include susy-breakpoint($medium) {
   .top {
     @include span(12);
     background: #f8c833;
@@ -67,8 +69,10 @@ body {
   }
 }
 
-@include breakpoint($large) {
-  @include layout(24);
+/*@include susy-breakpoint($large, 24 split) {}*/
+
+@include susy-breakpoint($large, 24) {
+
   .top {
     @include span(14);
     background: #f8c833;
@@ -76,7 +80,7 @@ body {
   }
 
   .header {
-    @include span(10 at 15);
+    @include span(10 last);
     background: #ed4383;
 
   }
@@ -84,19 +88,34 @@ body {
     @include span(24);
   }
   .main {
-    background: #908ad2;
+    background: #a6a7d2;
     @include span(18);
   }
 
   .col1, .col2, .col3 {
-    @include breakpoint(500px) {
-      @include span(8 inside);
-    }
-    @include breakpoint(1200px) {
-      @include span(1 of 3 inside);
-    }
+    @include span(8);
+  }
+  .col3 {
+    @include span(last);
   }
 
+  /*  .col3 {
+      @include span(8 last);
+    }*/
+
+  /*   .content {
+      @include span(8 of 12);
+      @include bleed(gutter(12));
+      margin-bottom: 0;
+      padding-bottom:     }
+
+  /*  .gallery-item {
+      @include gallery(2 of 8);
+      margin-bottom: gutter(8);
+    }
+    .gallery {
+      @include clearfix;
+    }*/
   /*  .col1 {
       background: #81d25d;
     }
@@ -108,7 +127,8 @@ body {
     }*/
 
   .aside {
-    @include span(6 at 19);
+    @include span(6 last);
     background: #47ba51;
+    /*    @include pad(10px);*/
   }
 }
