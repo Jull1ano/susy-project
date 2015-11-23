@@ -15,9 +15,16 @@ body {
   @include container(80%);
 }
 
-$small: 1px;
-$medium: 480px;
+ul, li {
+  padding: 0;
+  margin: 0 0 10px;
+  list-style-type: none;
+}
+
+$small: max-width 639px;
+$medium: 640px;
 $large: 1200px;
+$padd: 15px 20px 15px;
 @include susy-breakpoint($small) {
 
   .top {
@@ -64,7 +71,7 @@ $large: 1200px;
   }
 
   .aside {
-    @include span(4 at 9);
+    @include span(4);
     background: #47ba51;
   }
 }
@@ -72,6 +79,9 @@ $large: 1200px;
 /*@include susy-breakpoint($large, 24 split) {}*/
 
 @include susy-breakpoint($large, 24) {
+  .altceva {
+    padding: $padd;
+  }
 
   .top {
     @include span(14);
@@ -85,50 +95,72 @@ $large: 1200px;
 
   }
   h4, h3 {
-    @include span(24);
+    padding: $padd;
+    margin: 0;
+
   }
   .main {
-    background: #a6a7d2;
+    background: #cbcde2;
     @include span(18);
+    span {
+      padding: $padd;
+      display: block;
+    }
   }
-
+  .ulist li {
+    padding: $padd;
+    background: #47ba51;
+  }
   .col1, .col2, .col3 {
     @include span(8);
+    background: #6294d4;
+    margin-top: 0;
+    margin-bottom: 0;
+
   }
   .col3 {
     @include span(last);
+
   }
-
-  /*  .col3 {
-      @include span(8 last);
-    }*/
-
-  /*   .content {
-      @include span(8 of 12);
-      @include bleed(gutter(12));
-      margin-bottom: 0;
-      padding-bottom:     }
-
-  /*  .gallery-item {
-      @include gallery(2 of 8);
-      margin-bottom: gutter(8);
-    }
-    .gallery {
-      @include clearfix;
-    }*/
-  /*  .col1 {
-      background: #81d25d;
-    }
-    .col2 {
-      background: #d27e72;
-    }
-    .col3 {
-      background: #4f7dd2;
-    }*/
 
   .aside {
     @include span(6 last);
-    background: #47ba51;
-    /*    @include pad(10px);*/
+    background: #86de8b;
+
+  }
+  .gallery img {
+    @include gallery(1 of 6 .25);
+    padding-top: gutter(6 .25);
+  }
+}
+
+.mediac {
+  @include susy-breakpoint($small) {
+    @include span(12);
+    margin-bottom: gutter(12);
+  }
+  @include susy-breakpoint($medium) {
+    @include span(9);
+    margin-bottom: gutter(12);
+  }
+  @include susy-breakpoint($large, 24) {
+    @include span(23);
+    margin-bottom: gutter(24);
+  }
+}
+
+.pre {
+  background: #583d72;
+  color: #fff;
+  padding: $padd;
+
+  @include susy-breakpoint($small) {
+    background: #722a32;
+  }
+  @include susy-breakpoint($medium) {
+    background: #926c00;
+  }
+  @include susy-breakpoint($large) {
+    background: #583d72;
   }
 }
