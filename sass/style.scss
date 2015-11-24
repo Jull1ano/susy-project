@@ -1,6 +1,8 @@
 // Screen
 // ======
 @import "grids";
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=latin,latin-ext);
 
 @mixin max-min($max, $min) {
   max-width: $max;
@@ -9,12 +11,18 @@
 }
 
 body {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: 'Roboto', sans-serif;
   @include container(80%);
 }
+/*.red { @include sassy-button-gradient("matte", #e86a43); }
 
+.blue { @include sassy-button-gradient("simple", #4d8ccd); }
+
+.green { @include sassy-button-gradient("glass", #8cbe5f); }
+.button { @include sassy-button-structure(50px, 20px);
+  margin:10px auto; }*/
 ul, li {
   padding: 0;
   margin: 0 0 10px;
@@ -78,28 +86,32 @@ $padd: 15px 20px 15px;
 
 /*@include susy-breakpoint($large, 24 split) {}*/
 
-@include susy-breakpoint($large, 24) {
-  .altceva {
-    padding: $padd;
-  }
+.altceva {
+  padding: $padd;
+}
 
-  .top {
+.top {
+  @include susy-breakpoint($large, 24) {
     @include span(14);
     background: #f8c833;
-
+    margin-bottom:gutter(24);
+    img {
+      @include span(10);
+    }
   }
+}
 
-  .header {
+.header {
+  @include susy-breakpoint($large, 24) {
     @include span(10 last);
     background: #ed4383;
+    margin-bottom:gutter(24);
 
   }
-  h4, h3 {
-    padding: $padd;
-    margin: 0;
+}
 
-  }
-  .main {
+.main {
+  @include susy-breakpoint($large, 24) {
     background: #cbcde2;
     @include span(18);
     span {
@@ -107,28 +119,40 @@ $padd: 15px 20px 15px;
       display: block;
     }
   }
-  .ulist li {
+}
+
+.ulist li {
+  @include susy-breakpoint($large, 24) {
     padding: $padd;
     background: #47ba51;
   }
-  .col1, .col2, .col3 {
+}
+
+.col1, .col2, .col3 {
+  @include susy-breakpoint($large, 24) {
     @include span(8);
     background: #6294d4;
     margin-top: 0;
     margin-bottom: 0;
-
   }
-  .col3 {
+}
+
+.col3 {
+  @include susy-breakpoint($large, 24) {
     @include span(last);
-
   }
+}
 
-  .aside {
+.aside {
+  @include susy-breakpoint($large, 24) {
     @include span(6 last);
     background: #86de8b;
-
   }
-  .gallery img {
+  @include clearfix;
+}
+
+.gallery img {
+  @include susy-breakpoint($large, 24) {
     @include gallery(1 of 6 .25);
     padding-top: gutter(6 .25);
   }
@@ -140,11 +164,11 @@ $padd: 15px 20px 15px;
     margin-bottom: gutter(12);
   }
   @include susy-breakpoint($medium) {
-    @include span(9);
+    @include span(12);
     margin-bottom: gutter(12);
   }
   @include susy-breakpoint($large, 24) {
-    @include span(23);
+    @include span(24);
     margin-bottom: gutter(24);
   }
 }
@@ -163,4 +187,12 @@ $padd: 15px 20px 15px;
   @include susy-breakpoint($large) {
     background: #583d72;
   }
+}
+
+
+h1, h2, h3, h4 {
+  padding: $padd;
+  margin: 0;
+  padding-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
