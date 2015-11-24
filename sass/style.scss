@@ -10,105 +10,101 @@
   margin: 30px auto;
 }
 
+$small: max-width 639px;
+$medium: 640px;
+$large: 1200px;
+$padd: 15px 20px 15px;
+
 body {
-  font-size: 15px;
-  line-height: 22px;
+  @include rex(font-size, 1.6rem);
+  @include rex(line-height, 2.4rem);
   font-family: 'Roboto', sans-serif;
   @include container(80%);
 }
 
-/*.red { @include sassy-button-gradient("matte", #e86a43); }
-
-.blue { @include sassy-button-gradient("simple", #4d8ccd); }
-
-.green { @include sassy-button-gradient("glass", #8cbe5f); }
-.button { @include sassy-button-structure(50px, 20px);
-  margin:10px auto; }*/
 ul, li {
   padding: 0;
   margin: 0 0 10px;
   list-style-type: none;
 }
 
-$small: max-width 639px;
-$medium: 640px;
-$large: 1200px;
-$padd: 15px 20px 15px;
-@include susy-breakpoint($small) {
-
-  .top {
-    @include span(12);
-    background: #f8c833;
-
-  }
-
-  .header {
-    @include span(12);
-    background: #af887f;
-
-  }
-
-  .main {
-    @include span(12);
-    background: #908ad2;
-
-  }
-
-  .aside {
-    @include span(12);
-    background: #47ba51;
-  }
-}
-
-@include susy-breakpoint($medium) {
-  .top {
-    @include span(12);
-    background: #f8c833;
-
-  }
-
-  .header {
-    @include span(6);
-    background: #ed4383;
-
-  }
-
-  .main {
-    @include span(8);
-    background: #908ad2;
-
-  }
-
-  .aside {
-    @include span(4);
-    background: #47ba51;
-  }
-}
-
-/*@include susy-breakpoint($large, 24 split) {}*/
-
-.altceva {
+h1, h2, h3, h4 {
   padding: $padd;
+  margin: 0;
+  padding-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.mediac {
+  @include span(12);
+  margin-bottom: gutter(12);
+
+  @include susy-breakpoint($medium) {
+    @include span(12);
+  }
+  @include susy-breakpoint($large, 24) {
+    @include span(24);
+
+  }
+}
+
+.pre {
+  background: #722a32;
+  color: #fff;
+  padding: $padd;
+
+  @include susy-breakpoint($medium) {
+    background: #a86000;
+  }
+  @include susy-breakpoint($large) {
+    background: #583d72;
+  }
 }
 
 .top {
-  @include susy-breakpoint($large, 24) {
-    @include span(14);
-    background: #f8c833;
-    margin-bottom: gutter(24);
+  @include span(12);
+  background: #323052;
+  color: #fff;
+  margin-bottom: gutter(12);
+  img {
+    @include span(12);
+    margin-bottom: gutter(6);
+  }
+  @include susy-breakpoint($medium) {
+    @include span(7);
+    background: #d1d6eb;
+    color: #000;
     img {
-      @include span(10);
+      @include span(6);
+      margin-bottom: gutter(12);
+    }
+  }
+  @include susy-breakpoint($large) {
+    @include span(8);
+    background: #f8c833;
+    img {
+      @include span(5);
     }
   }
 }
 
 .header {
-  @include susy-breakpoint($large, 24) {
-    @include span(10 last);
-    background: #ed4383;
-    margin-bottom: gutter(24);
+  @include span(12);
+  background: #ed4383;
+  margin-bottom: gutter(12);
 
+  @include susy-breakpoint($medium) {
+    @include span(5 last);
+    background: #edb682;
   }
+  @include susy-breakpoint($large) {
+    @include span(4 last);
+    background: #ed4383;
+  }
+}
+
+.altceva {
+  padding: $padd;
 }
 
 .main {
@@ -122,11 +118,12 @@ $padd: 15px 20px 15px;
   }
 }
 
-.ulist li {
+.aside {
   @include susy-breakpoint($large, 24) {
-    padding: $padd;
-    background: #47ba51;
+    @include span(6 last);
+    background: #86de8b;
   }
+  @include clearfix;
 }
 
 .col1, .col2, .col3 {
@@ -144,14 +141,6 @@ $padd: 15px 20px 15px;
   }
 }
 
-.aside {
-  @include susy-breakpoint($large, 24) {
-    @include span(6 last);
-    background: #86de8b;
-  }
-  @include clearfix;
-}
-
 .gallery img {
   @include susy-breakpoint($large, 24) {
     @include gallery(1 of 6 .25);
@@ -159,40 +148,9 @@ $padd: 15px 20px 15px;
   }
 }
 
-.mediac {
-  @include susy-breakpoint($small) {
-    @include span(12);
-    margin-bottom: gutter(12);
-  }
-  @include susy-breakpoint($medium) {
-    @include span(12);
-    margin-bottom: gutter(12);
-  }
+.ulist li {
   @include susy-breakpoint($large, 24) {
-    @include span(24);
-    margin-bottom: gutter(24);
+    padding: $padd;
+    background: #47ba51;
   }
-}
-
-.pre {
-  background: #583d72;
-  color: #fff;
-  padding: $padd;
-
-  @include susy-breakpoint($small) {
-    background: #722a32;
-  }
-  @include susy-breakpoint($medium) {
-    background: #926c00;
-  }
-  @include susy-breakpoint($large) {
-    background: #583d72;
-  }
-}
-
-h1, h2, h3, h4 {
-  padding: $padd;
-  margin: 0;
-  padding-top: 20px;
-  font-family: 'Roboto Condensed', sans-serif;
 }

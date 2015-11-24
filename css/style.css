@@ -1,192 +1,214 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=latin,latin-ext);
-/* line 13, ../sass/style.scss */
+/* line 35, ../sass/_grids.scss */
+html {
+  font-size: 62.5%;
+  /* 1 */
+}
+
+/* line 18, ../sass/style.scss */
 body {
-  font-size: 15px;
-  line-height: 22px;
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 16px;
+  /* 9 */
+  font-size: 1.6rem;
+  /* 9 */
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  line-height: 24px;
+  /* 9 */
+  line-height: 2.4rem;
+  /* 9 */
   font-family: 'Roboto', sans-serif;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.7/sass/susy/output/support/_clearfix.scss */
 body:after {
   content: " ";
   display: block;
   clear: both;
 }
 
-/*.red { @include sassy-button-gradient("matte", #e86a43); }
-
-.blue { @include sassy-button-gradient("simple", #4d8ccd); }
-
-.green { @include sassy-button-gradient("glass", #8cbe5f); }
-.button { @include sassy-button-structure(50px, 20px);
-  margin:10px auto; }*/
-/* line 27, ../sass/style.scss */
+/* line 25, ../sass/style.scss */
 ul, li {
   padding: 0;
   margin: 0 0 10px;
   list-style-type: none;
 }
 
-@media (max-width: 639px) {
-  /* line 39, ../sass/style.scss */
-  .top {
+/* line 31, ../sass/style.scss */
+h1, h2, h3, h4 {
+  padding: 15px 20px 15px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* line 38, ../sass/style.scss */
+.mediac {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1.69492%;
+}
+@media (min-width: 640px) {
+  /* line 38, ../sass/style.scss */
+  .mediac {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
-    background: #f8c833;
   }
-
-  /* line 45, ../sass/style.scss */
-  .header {
+}
+@media (min-width: 1200px) {
+  /* line 38, ../sass/style.scss */
+  .mediac {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
-    background: #af887f;
   }
+}
 
+/* line 51, ../sass/style.scss */
+.pre {
+  background: #722a32;
+  color: #fff;
+  padding: 15px 20px 15px;
+}
+@media (min-width: 640px) {
   /* line 51, ../sass/style.scss */
-  .main {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    background: #908ad2;
+  .pre {
+    background: #a86000;
   }
+}
+@media (min-width: 1200px) {
+  /* line 51, ../sass/style.scss */
+  .pre {
+    background: #583d72;
+  }
+}
 
-  /* line 57, ../sass/style.scss */
-  .aside {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    background: #47ba51;
-  }
+/* line 64, ../sass/style.scss */
+.top {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #323052;
+  color: #fff;
+  margin-bottom: 1.69492%;
+}
+/* line 69, ../sass/style.scss */
+.top img {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 3.44828%;
 }
 @media (min-width: 640px) {
   /* line 64, ../sass/style.scss */
   .top {
-    width: 100%;
+    width: 57.62712%;
     float: left;
-    margin-left: 0;
-    margin-right: 0;
-    background: #f8c833;
+    margin-right: 1.69492%;
+    background: #d1d6eb;
+    color: #000;
   }
-
-  /* line 70, ../sass/style.scss */
-  .header {
-    width: 47.82609%;
+  /* line 77, ../sass/style.scss */
+  .top img {
+    width: 49.15254%;
     float: left;
-    margin-right: 4.34783%;
-    background: #ed4383;
-  }
-
-  /* line 76, ../sass/style.scss */
-  .main {
-    width: 65.21739%;
-    float: left;
-    margin-right: 4.34783%;
-    background: #908ad2;
-  }
-
-  /* line 82, ../sass/style.scss */
-  .aside {
-    width: 30.43478%;
-    float: left;
-    margin-right: 4.34783%;
-    background: #47ba51;
+    margin-right: 1.69492%;
+    margin-bottom: 1.69492%;
   }
 }
-/*@include susy-breakpoint($large, 24 split) {}*/
-/* line 90, ../sass/style.scss */
+@media (min-width: 1200px) {
+  /* line 64, ../sass/style.scss */
+  .top {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    background: #f8c833;
+  }
+  /* line 85, ../sass/style.scss */
+  .top img {
+    width: 40.67797%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+
+/* line 91, ../sass/style.scss */
+.header {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #ed4383;
+  margin-bottom: 1.69492%;
+}
+@media (min-width: 640px) {
+  /* line 91, ../sass/style.scss */
+  .header {
+    width: 40.67797%;
+    float: right;
+    margin-right: 0;
+    background: #edb682;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 91, ../sass/style.scss */
+  .header {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    background: #ed4383;
+  }
+}
+
+/* line 106, ../sass/style.scss */
 .altceva {
   padding: 15px 20px 15px;
 }
 
 @media (min-width: 1200px) {
-  /* line 94, ../sass/style.scss */
-  .top {
-    width: 57.44681%;
-    float: left;
-    margin-right: 2.12766%;
-    background: #f8c833;
-    margin-bottom: 2.12766%;
-  }
-  /* line 99, ../sass/style.scss */
-  .top img {
-    width: 40.42553%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 105, ../sass/style.scss */
-  .header {
-    width: 40.42553%;
-    float: right;
-    margin-right: 0;
-    background: #ed4383;
-    margin-bottom: 2.12766%;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 114, ../sass/style.scss */
+  /* line 110, ../sass/style.scss */
   .main {
     background: #cbcde2;
-    width: 74.46809%;
+    width: 74.78992%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 0.84034%;
   }
-  /* line 118, ../sass/style.scss */
+  /* line 114, ../sass/style.scss */
   .main span {
     padding: 15px 20px 15px;
     display: block;
   }
 }
 
-@media (min-width: 1200px) {
-  /* line 125, ../sass/style.scss */
-  .ulist li {
-    padding: 15px 20px 15px;
-    background: #47ba51;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 132, ../sass/style.scss */
-  .col1, .col2, .col3 {
-    width: 31.91489%;
-    float: left;
-    margin-right: 2.12766%;
-    background: #6294d4;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 141, ../sass/style.scss */
-  .col3 {
-    float: right;
-    margin-right: 0;
-  }
-}
-
-/* line 147, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .aside {
   overflow: hidden;
   *zoom: 1;
 }
 @media (min-width: 1200px) {
-  /* line 147, ../sass/style.scss */
+  /* line 121, ../sass/style.scss */
   .aside {
-    width: 23.40426%;
+    width: 24.36975%;
     float: right;
     margin-right: 0;
     background: #86de8b;
@@ -194,44 +216,64 @@ ul, li {
 }
 
 @media (min-width: 1200px) {
-  /* line 155, ../sass/style.scss */
+  /* line 129, ../sass/style.scss */
+  .col1, .col2, .col3 {
+    width: 32.77311%;
+    float: left;
+    margin-right: 0.84034%;
+    background: #6294d4;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 138, ../sass/style.scss */
+  .col3 {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 144, ../sass/style.scss */
   .gallery img {
     width: 13.7931%;
     float: left;
     padding-top: 3.44828%;
   }
-  /* line 66, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/language/susy/_gallery.scss */
+  /* line 66, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.7/sass/susy/language/susy/_gallery.scss */
   .gallery img:nth-child(6n + 1) {
     margin-left: 0;
     margin-right: -100%;
     clear: both;
     margin-left: 0;
   }
-  /* line 66, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/language/susy/_gallery.scss */
+  /* line 66, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.7/sass/susy/language/susy/_gallery.scss */
   .gallery img:nth-child(6n + 2) {
     margin-left: 17.24138%;
     margin-right: -100%;
     clear: none;
   }
-  /* line 66, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/language/susy/_gallery.scss */
+  /* line 66, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.7/sass/susy/language/susy/_gallery.scss */
   .gallery img:nth-child(6n + 3) {
     margin-left: 34.48276%;
     margin-right: -100%;
     clear: none;
   }
-  /* line 66, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/language/susy/_gallery.scss */
+  /* line 66, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.7/sass/susy/language/susy/_gallery.scss */
   .gallery img:nth-child(6n + 4) {
     margin-left: 51.72414%;
     margin-right: -100%;
     clear: none;
   }
-  /* line 66, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/language/susy/_gallery.scss */
+  /* line 66, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.7/sass/susy/language/susy/_gallery.scss */
   .gallery img:nth-child(6n + 5) {
     margin-left: 68.96552%;
     margin-right: -100%;
     clear: none;
   }
-  /* line 66, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/language/susy/_gallery.scss */
+  /* line 66, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.7/sass/susy/language/susy/_gallery.scss */
   .gallery img:nth-child(6n + 6) {
     margin-left: 86.2069%;
     margin-right: -100%;
@@ -239,66 +281,10 @@ ul, li {
   }
 }
 
-@media (max-width: 639px) {
-  /* line 162, ../sass/style.scss */
-  .mediac {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 4.34783%;
-  }
-}
-@media (min-width: 640px) {
-  /* line 162, ../sass/style.scss */
-  .mediac {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 4.34783%;
-  }
-}
 @media (min-width: 1200px) {
-  /* line 162, ../sass/style.scss */
-  .mediac {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 2.12766%;
+  /* line 151, ../sass/style.scss */
+  .ulist li {
+    padding: 15px 20px 15px;
+    background: #47ba51;
   }
-}
-
-/* line 177, ../sass/style.scss */
-.pre {
-  background: #583d72;
-  color: #fff;
-  padding: 15px 20px 15px;
-}
-@media (max-width: 639px) {
-  /* line 177, ../sass/style.scss */
-  .pre {
-    background: #722a32;
-  }
-}
-@media (min-width: 640px) {
-  /* line 177, ../sass/style.scss */
-  .pre {
-    background: #926c00;
-  }
-}
-@media (min-width: 1200px) {
-  /* line 177, ../sass/style.scss */
-  .pre {
-    background: #583d72;
-  }
-}
-
-/* line 193, ../sass/style.scss */
-h1, h2, h3, h4 {
-  padding: 15px 20px 15px;
-  margin: 0;
-  padding-top: 20px;
-  font-family: 'Roboto Condensed', sans-serif;
 }
