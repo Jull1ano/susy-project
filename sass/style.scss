@@ -16,6 +16,7 @@ body {
   font-family: 'Roboto', sans-serif;
   @include container(80%);
 }
+
 /*.red { @include sassy-button-gradient("matte", #e86a43); }
 
 .blue { @include sassy-button-gradient("simple", #4d8ccd); }
@@ -94,7 +95,7 @@ $padd: 15px 20px 15px;
   @include susy-breakpoint($large, 24) {
     @include span(14);
     background: #f8c833;
-    margin-bottom:gutter(24);
+    margin-bottom: gutter(24);
     img {
       @include span(10);
     }
@@ -105,7 +106,7 @@ $padd: 15px 20px 15px;
   @include susy-breakpoint($large, 24) {
     @include span(10 last);
     background: #ed4383;
-    margin-bottom:gutter(24);
+    margin-bottom: gutter(24);
 
   }
 }
@@ -188,7 +189,6 @@ $padd: 15px 20px 15px;
     background: #583d72;
   }
 }
-
 
 h1, h2, h3, h4 {
   padding: $padd;
