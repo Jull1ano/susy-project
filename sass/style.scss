@@ -11,7 +11,7 @@
 }
 
 $small: max-width 639px;
-$medium: 640px;
+$medium: 728px;
 $large: 1200px;
 $padd: 15px 20px 15px;
 
@@ -19,13 +19,21 @@ body {
   @include rex(font-size, 1.6rem);
   @include rex(line-height, 2.4rem);
   font-family: 'Roboto', sans-serif;
+  @include breakpoint(max-width 500px) {
+    @include container(100%);
+  }
   @include container(80%);
+  @include breakpoint (1500px) {
+    max-width:1200px;
+  }
 }
 
 ul, li {
   padding: 0;
-  margin: 0 0 10px;
+  margin: 0;
+  margin-bottom: gutter(12);
   list-style-type: none;
+  float: left;
 }
 
 h1, h2, h3, h4 {
@@ -49,12 +57,12 @@ h1, h2, h3, h4 {
 }
 
 .pre {
-  background: #722a32;
+  background: #583d72;
   color: #fff;
   padding: $padd;
 
   @include susy-breakpoint($medium) {
-    background: #a86000;
+    background: #443f72;
   }
   @include susy-breakpoint($large) {
     background: #583d72;
@@ -108,49 +116,113 @@ h1, h2, h3, h4 {
 }
 
 .main {
+  @include span(12);
+  background: #c8e2bd;
+  span {
+    padding: $padd;
+    display: block;
+  }
+  @include susy-breakpoint($medium) {
+    background: #dde2bf;
+    @include span(8);
+  }
   @include susy-breakpoint($large, 24) {
     background: #cbcde2;
-    @include span(18);
-    span {
-      padding: $padd;
-      display: block;
-    }
+    @include span(16);
   }
 }
 
 .aside {
+  @include rex(font-size, 1.4rem);
+  @include rex(line-height, 2.0rem);
+  @include span(12);
+  background: #dec293;
+
+  @include susy-breakpoint($medium) {
+    @include span(4 last);
+    background: #acfaff;
+  }
   @include susy-breakpoint($large, 24) {
-    @include span(6 last);
+    @include span(8 last);
     background: #86de8b;
   }
-  @include clearfix;
 }
 
 .col1, .col2, .col3 {
-  @include susy-breakpoint($large, 24) {
-    @include span(8);
-    background: #6294d4;
-    margin-top: 0;
+  @include span(12);
+  background: #87c384;
+  margin-top: 0;
+  margin-bottom: gutter(12);
+  float: left;
+  @include susy-breakpoint($medium) {
+    @include span(6);
+    background: #ad96d4;
     margin-bottom: 0;
+  }
+  @include susy-breakpoint($large) {
+    @include span(4);
+    background: #6294d4;
+  }
+}
+
+.col2 {
+  @include susy-breakpoint($medium) {
+    @include span(last);
+  }
+  @include susy-breakpoint($large) {
+    @include span(4 at 5);
   }
 }
 
 .col3 {
-  @include susy-breakpoint($large, 24) {
+  @include susy-breakpoint($medium) {
+    display: none;
+  }
+  @include susy-breakpoint($large) {
+    display: block;
     @include span(last);
   }
 }
 
 .gallery img {
+/*  @include susy-breakpoint(max-width 480px, 12) {
+    @include gallery(1 of 1);
+    padding-top: gutter(1);
+  }*/
+  @include gallery(6 of 12);
+  padding-top: gutter(12);
+  @include susy-breakpoint($medium) {
+    @include gallery(1 of 4 .10);
+    padding-top: gutter(4 .10);
+  }
   @include susy-breakpoint($large, 24) {
     @include gallery(1 of 6 .25);
     padding-top: gutter(6 .25);
   }
 }
 
+.ulist li:nth-child(2n+2) {
+  @include susy-breakpoint($large) {
+    @include span(last);
+  }
+}
+
 .ulist li {
-  @include susy-breakpoint($large, 24) {
-    padding: $padd;
+    @include span(12);
+  @include susy-breakpoint($large) {
+    @include span(6);
+  }
+}
+
+.ulist li span {
+  float: left;
+  padding: $padd;
+  background: #cbb466;
+  @include susy-breakpoint($medium) {
+    background: #65e0f2;
+  }
+  @include susy-breakpoint($large) {
     background: #47ba51;
+
   }
 }
