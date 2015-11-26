@@ -233,9 +233,9 @@ h1, h2, h3, h4 {
   /* line 118, ../sass/style.scss */
   .main {
     background: #cbcde2;
-    width: 66.38655%;
+    width: 66.10169%;
     float: left;
-    margin-right: 0.84034%;
+    margin-right: 1.69492%;
   }
 }
 
@@ -279,7 +279,7 @@ h1, h2, h3, h4 {
 @media (min-width: 1200px) {
   /* line 135, ../sass/style.scss */
   .aside {
-    width: 32.77311%;
+    width: 32.20339%;
     float: right;
     margin-right: 0;
     background: #86de8b;

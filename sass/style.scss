@@ -126,9 +126,9 @@ h1, h2, h3, h4 {
     background: #dde2bf;
     @include span(8);
   }
-  @include susy-breakpoint($large, 24) {
+  @include susy-breakpoint($large) {
     background: #cbcde2;
-    @include span(16);
+    @include span(8);
   }
 }
 
@@ -142,8 +142,8 @@ h1, h2, h3, h4 {
     @include span(4 last);
     background: #acfaff;
   }
-  @include susy-breakpoint($large, 24) {
-    @include span(8 last);
+  @include susy-breakpoint($large) {
+    @include span(4 last);
     background: #86de8b;
   }
 }
